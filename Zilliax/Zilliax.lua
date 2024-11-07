@@ -4,7 +4,7 @@
 --- MOD_AUTHOR: [sishui]
 --- MOD_DESCRIPTION: Customizable Your own Zilliax
 --- BADGE_COLOUR: 9933FF
---- VERSION: 1.0.0
+--- VERSION: 1.0.1
 --- PREFIX: zil
 ----------------------------------------------
 ------------MOD CODE -------------------------
@@ -345,7 +345,7 @@ SMODS.Joker{
         end
         --5
         if card.ability.zilmodule5 == true then
-        if context.other_joker and context.other_joker ~= card then
+        if context.other_joker and context.other_joker ~= card and context.other_joker.ability.set == 'Joker' then
                 -- Animate
                 G.E_MANAGER:add_event(Event({
                     func = function()
